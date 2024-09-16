@@ -1,0 +1,193 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+ */
+/*-------------------------------------- navbar css ---------------------------- */
+.carticonBox{
+position: relative;
+}
+.cartIcon{
+  font-size: 1.42rem;
+}
+.cartLength {
+  position: absolute;
+  top: -18px;
+  right: -9px;
+  z-index: 9999;
+  color: red;
+  background-color: #e3e1e1;
+  padding: 0px 6px;
+  border-radius: 50%;
+}
+.isActive{
+  color: red;
+  font-weight: 600;
+}
+.navlink{
+  color: #1f2937;
+  font-weight: 600;
+}
+/* ------------------------------------- card css ------------------*/
+.card-box {
+
+  padding: 30px;
+  margin: 5px;
+  box-shadow: 0px 0px 2px 2px #e2e0e0;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.img-box{
+  height: 250px;
+}
+
+.img-box img {
+  max-height: 100%;
+}
+
+
+.img-box {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.title-product {
+  /* overflow: hidden; */
+  max-width: 100%;
+  /* text-overflow: ellipsis; */
+  /* width: fit-content; */
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 21px;
+  /* max-height: 49px; */
+  /* padding: 4px 10px; */
+  max-width: auto;
+  /* background-color: #04af2f; */
+  /* color: white; */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+/* -------------------------------------home css  ------------------------------*/
+
+
+.bg-colr {
+  background-image: linear-gradient(180deg, #0084D6 -50%, #0000007d 100%);
+}
+.bannersection {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  /* background-image: linear-gradient(180deg, #0084D6 -50%, var(--e-global-color-astglobalcolor7) 100%); */
+}
+
+.banner-conatent {
+  position: absolute;
+  top: 38%;
+}
+
+.banner-conatent h2 {
+  color: white;
+  font-size: 2.75rem;
+  font-weight: 600;
+  width: 65%;
+  line-height: 1.1;
+}
+.banner-conatent h5 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 500;
+  margin-block: 26px;
+}
+.bannersection::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: #291f6345;
+  width: 50%;
+}
+/*-------------------------------------- cart css------------------------- */
+.imgDiv{
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+.imgDiv img{
+  height: 100%;
+  width: 100%;
+}
+
+.card-contentr{
+  display: grid;
+   grid-template-columns:repeat(4, 1fr);
+  gap: 12px;
+}
+.card-contentr1{
+  display: grid;
+   grid-template-columns:repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* -------------------------------------------ṃedai query -----------------------------*/
+@media only screen and (max-width: 768px) {
+  .card-contentr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .card-contentr1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .card-contentr{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+  .card-contentr1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+  .img-box {
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    width: 100%;
+}
+.banner-conatent h2 {
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 600;
+  width: 65%;
+  line-height: 1.1;
+}
+.banner-conatent h5 {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 500;
+  margin-block: 18px;
+}
+}
