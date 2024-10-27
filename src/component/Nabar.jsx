@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link, Outlet ,NavLink} from "react-router-dom";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GoHeartFill } from "react-icons/go";
 const Nabar = () => {
   const {cartItm}=useSelector((state)=>state.cart)
   return (
@@ -53,16 +54,20 @@ const Nabar = () => {
       
     </ul>
   </div>
-  <div className="navbar-end">
+ 
+  <div className="navbar-end flex gap-4">
+  <GoHeartFill className='text-2xl text-red-400' />
    <Link to="/cart" >
    <div className='carticonBox'>
    <FontAwesomeIcon icon={faCartShopping}  className="cartIcon"/>
     <p className="cartLength">
     {cartItm.length}
    </p>
+
    </div>
    
    </Link>
+  
   </div>
       </div>
       <Outlet />

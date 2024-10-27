@@ -90,7 +90,7 @@ export const cartSlice = createSlice({
         state.cartItm[itemIndex].qty += 1;
       }
     },
-emptyCart:(state,action)=>{
+    emptyCart:(state,action)=>{
   state.cartItm=[]
 }
 
