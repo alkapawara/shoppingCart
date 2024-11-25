@@ -123,12 +123,104 @@ position: relative;
   background: #291f6345;
   width: 50%;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 12px; /* Space between grid items */
+}
+
+.gallery .galleryLink .imgDivs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the space */
+}
+
+/* .gallery .galleryLink .imgDivs:first-of-type(1) img {
+  grid-column: span 1; 
+  grid-row: span 2; 
+  aspect-ratio: 1/2;
+} */
+ .imgDivs{
+  height: 250px;
+ }
+.gallery .galleryLink .imgDivs:nth-of-type(1) img {
+  grid-column: span 1; /* Spans 1 column */
+  grid-row: span 2; /* Spans 2 rows */
+  aspect-ratio: 1/2; /* Vertical rectangle */
+}
+
+.gallery .galleryLink.imgDivs :nth-of-type(2) img {
+  grid-column: span 1; /* Spans 1 column */
+  grid-row: span 1; /* Spans 2 rows */
+  aspect-ratio: 1/1; /* Vertical rectangle */
+}
+
+.gallery .galleryLink.imgDivs :nth-of-type(3)  img {
+  grid-column: span 2; /* Spans 2 columns */
+  grid-row: span 1; /* Spans 1 row */
+  aspect-ratio: 2/1; /* Horizontal rectangle */
+}
+
+.gallery .galleryLink.imgDivs :nth-of-type(4) img {
+  grid-column: span 2; /* Spans 2 columns */
+  grid-row: span 2; /* Spans 2 rows */
+  aspect-ratio: 2/2; /* Square */
+}
+
+
+.productCard {
+  position: relative; /* Ensure the icons are positioned relative to this container */
+  transition: all 300ms ease .11s;
+}
+
+.right-icon {
+  position: absolute;
+  top: 10px;
+  right: -50px; /* Initially off-screen to the right */
+  opacity: 0; /* Initially hidden */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.5s ease; /* Combine right and opacity for smooth effect */
+}
+
+.productCard:hover .right-icon {
+  right: 10px; /* Slide in */
+  opacity: 1; /* Fade in */
+}
+.cartBtn {
+  position: absolute;
+  bottom: 10px; /* Initially off-screen at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  opacity: 0; /* Initially hidden */
+  transition: all 0.5s ease; /* Smooth animation */
+}
+
+.productCard:hover .cartBtn {
+  bottom: 80px; /* Slide the button into view */
+  opacity: 1; /* Make it visible */
+}
+
+
+.best-services{
+  background-image: url("https://shopo.quomodothemes.website/assets/images/service-bg.png");
+  background-size: cover;
+  background-color: #1f295d;
+}
+.iconCart{
+  height: 35px;
+  width: 35px;
+}
+
 /*-------------------------------------- cart css------------------------- */
 .imgDiv{
   height: 50px;
   width: 50px;
   margin: auto;
 }
+
 .imgDiv img{
   height: 100%;
   width: 100%;
@@ -139,11 +231,20 @@ position: relative;
    grid-template-columns:repeat(4, 1fr);
   gap: 30px;
 }
+
 .card-contentr1{
   display: grid;
    grid-template-columns:repeat(4, 1fr);
   gap: 12px;
 }
+
+/* -----------------------------counter css ---------------------- */
+.campaign-countdown {
+  background-image: url("./assets/img/campaign-cover-countdown-3.jpg");
+  background-size: cover;
+  /* background: pink; */
+}
+
 
 /* -------------------------------------------ṃedai query -----------------------------*/
 @media only screen and (max-width: 768px) {
@@ -190,4 +291,44 @@ position: relative;
   font-weight: 500;
   margin-block: 18px;
 }
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+}
+
+
+.slick-slider  {
+  margin: 20px 0;
+}
+.slick-slide div {
+  margin: 12px;
+}
+.slick-slide img {
+  display: block;
+  margin: auto;
+}
+
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-prev {
+
+  background: #dfd6e9!important;
+  /* padding: 12px; */
+  height: 30px!important;
+  width: 30px!important;
+  border-radius: 50%!important;
+ 
+}
+.slick-next {
+
+  background: #dfd6e9!important;
+  /* padding: 12px; */
+  height: 30px!important;
+  width: 30px!important;
+  border-radius: 50%!important;
+ 
 }

@@ -48,9 +48,9 @@ const Nabar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className=" menu-horizontal gap-5">
       <li><NavLink to="/" className={({ isActive }) => isActive ? "isActive" : "navlink"}>Home</NavLink></li>
-      <li><NavLink to="/about" className={({ isActive }) => isActive ? "isActive" : "navlink"}> About</NavLink></li>
+      <li><NavLink to="/shop" className={({ isActive }) => isActive ? "isActive" : "navlink"}> Shop</NavLink></li>
       
-      <li><NavLink to="/contact" className={({ isActive }) => isActive ? "isActive" : "navlink"}> Contact</NavLink></li>
+      {/* <li><NavLink to="/contact" className={({ isActive }) => isActive ? "isActive" : "navlink"}> Contact</NavLink></li> */}
       
     </ul>
   </div>

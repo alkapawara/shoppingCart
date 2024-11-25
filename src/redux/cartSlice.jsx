@@ -48,7 +48,8 @@ const initialState = {
     itm: [],
     loading: false,
     error:null,
-    cartItm:[]
+    cartItm:[],
+    filteredItems: [],
   }
 
 export const cartSlice = createSlice({
@@ -92,8 +93,12 @@ export const cartSlice = createSlice({
     },
     emptyCart:(state,action)=>{
   state.cartItm=[]
-}
+},
 
+    updateFilteredItems: (state, action) => {
+  // Update the filtered items based on the provided category
+  state.filteredItems = action.payload;
+},
    
   },
   extraReducers: (builder) => {
@@ -106,6 +111,7 @@ export const cartSlice = createSlice({
       // Add user to the state array
       state.loading = false
       state.itm=action.payload
+      state.filteredItems = action.payload;
     })
     builder.addCase(fetchUserById.rejected, (state, action) => {
       // Add user to the state array
@@ -137,6 +143,6 @@ export const cartSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const {addCart,delItm,decremtItm,incrmnttItm,emptyCart } = cartSlice.actions
+export const {addCart, delItm, decremtItm, incrmnttItm, emptyCart, updateFilteredItems } = cartSlice.actions
 
 export default cartSlice.reducer
