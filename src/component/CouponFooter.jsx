@@ -1,11 +1,12 @@
 import React from "react";
 import { CiMail } from "react-icons/ci";
+import imageData from "../imageData";
 const CouponFooter = () => {
   return (
     <div className=" mx-auto  h-[300px] mt-3 lg:mt-16 bg-[#c3d7f0] relative">
       <div className="thumb hidden lg:flex absolute left-0 bottom-[0px] w-[520px] h-[394px]">
         <img
-          src="https://shopo.quomodothemes.website/assets/images/discount-banner-3.1.png"
+          src={imageData.footerimg}
           className="w-full h-full object-contain"
         />
       </div>
